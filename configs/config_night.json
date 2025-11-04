@@ -1,0 +1,93 @@
+{
+    "processing": {
+        "canny_low": 30,
+        "canny_high": 90,
+        "hough_threshold": 20,
+        "hough_min_line_length": 40,
+        "hough_max_line_gap": 150,
+        "roi_vertices": {
+            "top_left": [0.4, 0.65],
+            "top_right": [0.6, 0.65],
+            "bottom_right": [0.85, 1.0],
+            "bottom_left": [0.15, 1.0]
+        },
+        "slope_threshold": 0.4,
+        "kernel_size": 7,
+        "frame_history": 15,
+        "smoothing_window": 5
+    },
+    "warning_system": {
+        "warning_threshold": 0.13,
+        "critical_threshold": 0.22,
+        "time_to_warning": 0.5,
+        "warning_persistence": 1.0,
+        "enable_audio": true,
+        "audio_volume": 0.95
+    },
+    "capture": {
+        "resolution": {
+            "width": 1280,
+            "height": 720
+        },
+        "fps": 30,
+        "video_duration": 30,
+        "auto_exposure": false,
+        "exposure_time": 0.016,
+        "gain": 2.0,
+        "night_mode": {
+            "enabled": true,
+            "ir_mode": "auto",
+            "noise_reduction": "high",
+            "contrast_enhancement": true,
+            "gamma": 1.2
+        }
+    },
+    "output": {
+        "save_warnings": true,
+        "save_metrics": true,
+        "generate_reports": true,
+        "snapshot_quality": 90,
+        "report_format": "utf-8",
+        "visualization": {
+            "show_roi": true,
+            "show_lines": true,
+            "show_metrics": true,
+            "line_thickness": 3,
+            "text_scale": 0.8,
+            "night_colors": {
+                "lane_normal": [0, 255, 0],
+                "lane_warning": [255, 255, 0],
+                "lane_critical": [255, 0, 0],
+                "text": [255, 255, 255],
+                "overlay_opacity": 0.7
+            }
+        }
+    },
+    "performance": {
+        "enable_gpu": true,
+        "use_threading": true,
+        "max_threads": 4,
+        "buffer_size": 5,
+        "batch_processing": true,
+        "batch_size": 2
+    },
+    "environment": {
+        "type": "night",
+        "description": "Optimized for night driving with enhanced sensitivity and noise reduction",
+        "light_condition": "night",
+        "traffic_density": "low",
+        "road_type": "any",
+        "challenges": [
+            "low light",
+            "glare from headlights",
+            "reduced visibility",
+            "higher noise"
+        ],
+        "adaptive_settings": {
+            "enable_dynamic_roi": true,
+            "enable_light_adaptation": true,
+            "enable_glare_reduction": true,
+            "enable_noise_filtering": true
+        }
+    }
+}

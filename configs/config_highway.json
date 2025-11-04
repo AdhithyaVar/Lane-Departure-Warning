@@ -1,0 +1,79 @@
+{
+    "processing": {
+        "canny_low": 45,
+        "canny_high": 130,
+        "hough_threshold": 35,
+        "hough_min_line_length": 60,
+        "hough_max_line_gap": 120,
+        "roi_vertices": {
+            "top_left": [0.35, 0.6],
+            "top_right": [0.65, 0.6],
+            "bottom_right": [0.9, 1.0],
+            "bottom_left": [0.1, 1.0]
+        },
+        "slope_threshold": 0.45,
+        "kernel_size": 5,
+        "frame_history": 20,
+        "smoothing_window": 7
+    },
+    "warning_system": {
+        "warning_threshold": 0.1,
+        "critical_threshold": 0.18,
+        "time_to_warning": 0.4,
+        "warning_persistence": 1.2,
+        "enable_audio": true,
+        "audio_volume": 1.0
+    },
+    "capture": {
+        "resolution": {
+            "width": 1920,
+            "height": 1080
+        },
+        "fps": 60,
+        "video_duration": 30,
+        "auto_exposure": true,
+        "exposure_time": 0.003,
+        "gain": 1.0
+    },
+    "output": {
+        "save_warnings": true,
+        "save_metrics": true,
+        "generate_reports": true,
+        "snapshot_quality": 95,
+        "report_format": "utf-8",
+        "visualization": {
+            "show_roi": true,
+            "show_lines": true,
+            "show_metrics": true,
+            "line_thickness": 3,
+            "text_scale": 0.8
+        }
+    },
+    "performance": {
+        "enable_gpu": true,
+        "use_threading": true,
+        "max_threads": 6,
+        "buffer_size": 4,
+        "batch_processing": true,
+        "batch_size": 2
+    },
+    "environment": {
+        "type": "highway",
+        "description": "Optimized for highway driving with high speeds and long-distance lane detection",
+        "light_condition": "day",
+        "traffic_density": "medium",
+        "road_type": "highway",
+        "challenges": [
+            "high speeds",
+            "long curves",
+            "weather variations",
+            "distant detection"
+        ],
+        "adaptive_settings": {
+            "enable_dynamic_roi": true,
+            "enable_light_adaptation": true,
+            "enable_speed_adaptation": true,
+            "enable_distance_scaling": true
+        }
+    }
+}

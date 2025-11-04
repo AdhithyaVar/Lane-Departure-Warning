@@ -1,0 +1,60 @@
+{
+    "processing": {
+        "canny_low": 40,
+        "canny_high": 120,
+        "hough_threshold": 30,
+        "hough_min_line_length": 40,
+        "hough_max_line_gap": 100,
+        "roi_vertices": {
+            "top_left": [0.45, 0.6],
+            "top_right": [0.55, 0.6],
+            "bottom_right": [0.9, 1.0],
+            "bottom_left": [0.1, 1.0]
+        },
+        "slope_threshold": 0.4,
+        "kernel_size": 5,
+        "frame_history": 15,
+        "smoothing_window": 5
+    },
+    "warning_system": {
+        "warning_threshold": 0.15,
+        "critical_threshold": 0.25,
+        "time_to_warning": 0.5,
+        "warning_persistence": 1.0,
+        "enable_audio": true,
+        "audio_volume": 0.8
+    },
+    "capture": {
+        "resolution": {
+            "width": 1280,
+            "height": 720
+        },
+        "fps": 30,
+        "video_duration": 30,
+        "auto_exposure": true,
+        "exposure_time": 0.008,
+        "gain": 1.0
+    },
+    "output": {
+        "save_warnings": true,
+        "save_metrics": true,
+        "generate_reports": true,
+        "snapshot_quality": 95,
+        "report_format": "utf-8",
+        "visualization": {
+            "show_roi": true,
+            "show_lines": true,
+            "show_metrics": true,
+            "line_thickness": 2,
+            "text_scale": 0.6
+        }
+    },
+    "performance": {
+        "enable_gpu": true,
+        "use_threading": true,
+        "max_threads": 4,
+        "buffer_size": 5,
+        "batch_processing": true,
+        "batch_size": 2
+    }
+}
