@@ -2,6 +2,7 @@
     "processing": {
         "canny_low": 40,
         "canny_high": 120,
+        "adaptive_canny": false,
         "hough_threshold": 30,
         "hough_min_line_length": 45,
         "hough_max_line_gap": 100,
@@ -54,7 +55,7 @@
         "use_threading": true,
         "max_threads": 4,
         "buffer_size": 4,
-        "batch_processing": true,
+        "batch_processing": false,
         "batch_size": 2
     },
     "environment": {

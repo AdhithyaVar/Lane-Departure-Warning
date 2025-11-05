@@ -16,37 +16,108 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # Virtual Environment
 venv/
 ENV/
+env/
+.venv/
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+*~
+.DS_Store
 
-# Project specific
+# Project specific - Output directories
 output/lane_warnings/*
 !output/lane_warnings/.gitkeep
 output/reports/*
 !output/reports/.gitkeep
 output/snapshots/*
 !output/snapshots/.gitkeep
+output/processed/*
+!output/processed/.gitkeep
+
+# Data files
 data/videos/*
 !data/videos/.gitkeep
+!data/videos/README.md
 data/calibration/*
 !data/calibration/.gitkeep
 
 # Model files
-*.h5
-*.pkl
-*.pth
+models/*.h5
+models/*.pkl
+models/*.pth
+models/*.onnx
+!models/.gitkeep
 
 # Logs
 *.log
 logs/
+*.log.*
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+coverage.xml
+*.cover
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Documentation build
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Profiling
+*.prof
+*.lprof
+
+# Generated reports
+lane_report_*.txt
+snapshot_*.jpg
+warning_*.jpg
